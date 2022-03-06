@@ -11,6 +11,7 @@ import { TranslateModule  } from '@ngx-translate/core';
 import { TranslateHttpLoader  } from '@ngx-translate/http-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CKEditorModule } from 'ckeditor4-angular';
+import { LanguagePickerModule } from '@shared/language-picker';
 
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -34,7 +35,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppRoutingModule,
     ApiModule.forRoot({ rootUrl: 'https://localhost:5001' }),
     BrowserAnimationsModule,
-    CKEditorModule
+    CKEditorModule,
+    LanguagePickerModule
   ],
   bootstrap: [AppComponent]
 })

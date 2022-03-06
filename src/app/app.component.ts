@@ -7,10 +7,14 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private readonly _translateService: TranslateService) {
-    _translateService.setDefaultLang("en");
-    _translateService.use(localStorage.getItem("currentLanguage") || "en");
+  constructor(readonly _translateService: TranslateService) {
+    var currentLanguage = localStorage.getItem("currentLanguage") || "en";
+    _translateService.setDefaultLang(currentLanguage);
+    _translateService.use(currentLanguage);     
   }
 
-  config = { language: 'es' };
+  readonly config = {
+    language: localStorage.getItem("currentLanguage")
+  }
+
 }
