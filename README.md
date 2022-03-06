@@ -1,0 +1,1 @@
+# CkEditor-i18n
