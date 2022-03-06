@@ -10,6 +10,9 @@ import { TranslateLoader } from '@ngx-translate/core';
 import { TranslateModule  } from '@ngx-translate/core';
 import { TranslateHttpLoader  } from '@ngx-translate/http-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CKEditorModule } from 'ckeditor4-angular';
+
+
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
@@ -30,7 +33,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     HttpClientModule,
     AppRoutingModule,
     ApiModule.forRoot({ rootUrl: 'https://localhost:5001' }),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CKEditorModule
   ],
   bootstrap: [AppComponent]
 })
